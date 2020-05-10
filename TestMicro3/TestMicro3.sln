@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{292ABBE2-E017-4518-AAE7-02296D24D59F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice1", "Microservice1", "{779680D3-A028-4EA6-A665-6EA6361939C1}"
+	ProjectSection(SolutionItems) = preProject
+		Microservices\Microservice1\Dockerfile = Microservices\Microservice1\Dockerfile
+		Microservices\Microservice1\kubedeployment-service.yml = Microservices\Microservice1\kubedeployment-service.yml
+		Microservices\Microservice1\kubedeployment.yml = Microservices\Microservice1\kubedeployment.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice2", "Microservice2", "{D8050617-E7A6-4ACF-AF05-007796CB17B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceOne", "Microservices\Microservice1\MicroserviceOne\MicroserviceOne.csproj", "{20591223-CC4E-418A-B6EE-8F86D724797D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceTwo", "Microservices\Microservice2\MicroserviceTwo\MicroserviceTwo.csproj", "{64552DDC-9AB0-40B5-9A83-DE03578D7B39}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceOne.Domain", "Microservices\Microservice1\MicroserviceOne.Domain\MicroserviceOne.Domain.csproj", "{3DD92790-B063-4BA4-A043-24C21E535959}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20591223-CC4E-418A-B6EE-8F86D724797D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20591223-CC4E-418A-B6EE-8F86D724797D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20591223-CC4E-418A-B6EE-8F86D724797D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20591223-CC4E-418A-B6EE-8F86D724797D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64552DDC-9AB0-40B5-9A83-DE03578D7B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64552DDC-9AB0-40B5-9A83-DE03578D7B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64552DDC-9AB0-40B5-9A83-DE03578D7B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64552DDC-9AB0-40B5-9A83-DE03578D7B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD92790-B063-4BA4-A043-24C21E535959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD92790-B063-4BA4-A043-24C21E535959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD92790-B063-4BA4-A043-24C21E535959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD92790-B063-4BA4-A043-24C21E535959}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{779680D3-A028-4EA6-A665-6EA6361939C1} = {292ABBE2-E017-4518-AAE7-02296D24D59F}
+		{D8050617-E7A6-4ACF-AF05-007796CB17B9} = {292ABBE2-E017-4518-AAE7-02296D24D59F}
+		{20591223-CC4E-418A-B6EE-8F86D724797D} = {779680D3-A028-4EA6-A665-6EA6361939C1}
+		{64552DDC-9AB0-40B5-9A83-DE03578D7B39} = {D8050617-E7A6-4ACF-AF05-007796CB17B9}
+		{3DD92790-B063-4BA4-A043-24C21E535959} = {779680D3-A028-4EA6-A665-6EA6361939C1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A82C15DD-25BB-4ED8-BE83-966F1B6FF7E2}
+	EndGlobalSection
+EndGlobal
