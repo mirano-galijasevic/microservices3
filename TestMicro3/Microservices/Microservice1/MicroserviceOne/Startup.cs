@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MicroserviceOne.Domain.DomainServices;
+using MicroserviceOne.Domain.ServiceBus;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,17 +17,24 @@ namespace MicroserviceOne
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
+        /// <summary>
+        /// C'tor
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup( IConfiguration configuration )
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices( IServiceCollection services )
         {
             services.AddControllers();
+
+            services.AddTransient<ISomeService, SomeService>();
+            services.AddTransient<IServiceBusSender, ServiceBusSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
